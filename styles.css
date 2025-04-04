@@ -1,0 +1,310 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Dancing+Script:wght@500;700&display=swap');
+
+:root {
+    --main-green: #4CAF50;
+    --dark-green: #2E7D32;
+    --light-green: #A5D6A7;
+    --accent-color: #9C27B0;
+    --bg-color: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Landing Page */
+.landing-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    overflow: hidden;
+}
+
+.container {
+    z-index: 10;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 90%;
+    transform: translateY(0);
+    animation: float 6s ease-in-out infinite;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.her-name {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.animated-envelope {
+    font-size: 3rem;
+    color: var(--main-green);
+    margin: 1.5rem 0;
+}
+
+/* Fancy Button */
+.fancy-button {
+    background-color: var(--main-green);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+}
+
+.fancy-button:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fancy-button i {
+    margin-left: 8px;
+}
+
+/* Proposal Page */
+.proposal-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.butler-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.butler-image {
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.message-bubble {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.message-bubble:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+}
+
+.letter-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.letter-header h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--dark-green);
+}
+
+.letter-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.decision-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.yes-button {
+    background-color: var(--main-green);
+}
+
+.no-button {
+    background-color: #f44336;
+}
+
+/* Moving the "No" button */
+.no-button:hover {
+    animation: moveButton 0.5s ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Celebration Page */
+.celebration {
+    height: 100vh;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.celebration h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.celebration p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.anime-gif {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.anime-gif img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Falling Petals Animation */
+.falling-petals {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Floating Hearts Animation */
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100px) translateY(-50px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .butler-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .butler-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .message-bubble:before {
+        display: none;
+    }
+    
+    .decision-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .fancy-button {
+        width: 100%;
+    }
+}
+
+/* Confetti */
+.confetti-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f44336;
+    opacity: 0.7;
+    animation: confetti-fall linear forwards;
+}
