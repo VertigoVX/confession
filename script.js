@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageContent = document.getElementById('message-placeholder');
     
     // Your personal message - Edit this!
-    const personalMessage = `Cream Puff, ever since you've come into my life I've been the happiest I have ever been in such a long time. 
+    const personalMessage = `Cream Puff, how do I even begin, ever since you've come into my life you've taught me so much.
+
+    Before you I don't think I ever truly understood the depth of my heart, and its capacity to feel such adoration, admiration and love for one person.
+
+    I never imagined us being where we are right now, you're everything I prayed for, everything I wished for, and everything I want to keep for the rest of my life.
+
+    I feel like this is very late in the making but I wanted this moment to be special, you deserve more than just a simple text message asking you this question so I asked my friend Sebastian from black butler to help me out ;)
     
-    I was convinced to stay single for a long time but then you showed up and completely made me change my mind, now I can't imagine a world where you're not in it.
-    
-    You've taught me so much about me these past few months, like how much I can truly care for someone and also how I actually deserve to be treated.
-    
-    I want us to last forever and I think the first step in that is asking you to be my girlfriend. 
-    
-    Will you be my girlfriend my love?`;
+    Cream Puff, would you do me the honour of being my girlfriend? (officially)`;
     
     // Create falling petals
     createFallingPetals();
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize typed.js
         new Typed('#typed-message', {
             strings: [personalMessage],
-            typeSpeed: 40,
+            typeSpeed: 60,
             showCursor: true,
             cursorChar: '|',
             onComplete: function() {
